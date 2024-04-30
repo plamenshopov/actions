@@ -4,23 +4,31 @@ on:
   push:
     branches:
       - main
-    pull_request:
-      branches:
+  pull_request:
+    branches:
       - main
 
 jobs:
   hello:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - name: Hello world
       run: echo "Hello world"
       shell: bash
-  
+
+  Great:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Great world
+      run: echo "Great world"
+      shell: bash
+
   goodbye:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - name: Goodbye world
       run: echo "Goodbye world"
       shell: bash
